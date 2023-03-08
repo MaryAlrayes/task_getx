@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task/core/managers/font_manager.dart';
 import 'package:task/core/managers/styles_manager.dart';
+import 'package:task/core/routes/routes_name.dart';
 import 'package:task/features/posts/domain/entities/post_entity.dart';
 
 class PostsList extends StatelessWidget {
@@ -17,7 +18,7 @@ class PostsList extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: ListTile(
           key: UniqueKey(),
-          onTap: () => Get.toNamed('/post_details_page',
+          onTap: () => Get.toNamed(RoutesName.postDetails,
               arguments: {'post': posts[index]}),
           leading: CircleAvatar(
             child: Text(
